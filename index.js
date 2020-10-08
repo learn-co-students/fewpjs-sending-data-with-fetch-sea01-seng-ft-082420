@@ -17,7 +17,6 @@ function submitData(name, email){
     return fetch("http://localhost:3000/users", configObj)
         .then(resp => resp.json())
         .then(json => {
-            console.log(json)
             let pId = document.createElement('p');
             pId.textContent = json.id;
             document.body.appendChild(pId);
